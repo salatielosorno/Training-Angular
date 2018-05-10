@@ -20,9 +20,9 @@ export class GitSearchComponent implements OnInit {
     .then((response)=>{
       console.log(response)
 
-      setTimeout(()=>{
+      //setTimeout(()=>{
         this.searchResults = response as GitSearch;
-      }, 10000)
+      //}, 10000)
       
     }, (error)=>{
       alert("Error: " + error.statusText);

@@ -12,6 +12,7 @@ import { GitSearch } from '../git-search';
 export class GitSearchComponent implements OnInit {
 
   searchResults: GitSearch;
+  searchQuery: string;
 
   constructor(private GitSearchService: GitSearchService) { }
 
@@ -29,8 +30,8 @@ export class GitSearchComponent implements OnInit {
     })
   }
 
-  gitSearch = (query: string) => {
-    this.GitSearchService.gitSearch(query)
+  gitSearch = () => {
+    this.GitSearchService.gitSearch(this.searchQuery)
     .then((response) => {
       this.searchResults = response as GitSearch;
     }, (error)=>{

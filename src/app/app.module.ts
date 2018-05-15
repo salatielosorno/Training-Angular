@@ -23,10 +23,6 @@ const appRoutes: Routes = [
     path: 'search',
     redirectTo: '/search/angular',
     pathMatch: 'full'
-    /*component: GitSearchComponent,
-    data: {
-      title: 'Git Search'
-    }*/
   },
   {
     path: 'search/:query',
@@ -36,16 +32,6 @@ const appRoutes: Routes = [
   { 
     path: '**', component: NotFoundComponent
   }
-
-  //Route Parameters 
-  //Example:
-  /*
-  {
-    path: '', redirectTo: 'all-products', pathMatch: 'full'
-  },
-  { path: 'all-products', component: ProductList },
-  { path: 'products-details/:id', component: ProductDetails }
-  */
 ]
 
 @NgModule({
